@@ -1,10 +1,10 @@
 function Column(id, name) {
 	var self = this;
-	this.id = randomString();
+	this.id = id;
 	this.name = name || 'New column';
-	this.$element = createColumn();
+	// this.$element = createColumn();
 
-	function createColumn () {
+	function createColumn() {
 		// creating components of columns:
 		var $column = $('<div>').addClass('column col-lg-4');
 		var $columnTitle = $('<h2>').addClass('column-title text-center').text(self.name).css('font-weight', '700');

@@ -9,7 +9,7 @@ var board = {
 
 $('.create-column')
 	.click(function(){
-		var CoulmnName = prompt('Enter a column name');
+		var columnName = prompt('Enter a column name');
 		$.ajax({
 			url: baseUrl + '/column',
 			method: 'POST',
@@ -18,13 +18,13 @@ $('.create-column')
 			},
 			success: function(response){
 				var column = new Column(response.id, columnName);
-				if (name === "") { 
+				// if (name === "") { 
 					board.createColumn(column);
-				} else if (name) {
-					board.createColumn(column);
-				} else {
-					return false;
-				}			
+				// } else if (name) {
+				// 	board.createColumn(column);
+				// } else {
+				// 	return false;
+				// }			
 			}
 		});
 	});

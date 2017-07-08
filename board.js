@@ -1,6 +1,6 @@
 var board = {
 	name: 'Kanban Board',
-	addColumn: function(column) {
+	createColumn: function(column) {
 		this.$element.append(column.$element);
 		initSortable();
 	},

@@ -18,13 +18,7 @@ $('.create-column')
 			},
 			success: function(response){
 				var column = new Column(response.id, columnName);
-				// if (name === "") { 
-					board.createColumn(column);
-				// } else if (name) {
-				// 	board.createColumn(column);
-				// } else {
-				// 	return false;
-				// }			
+					board.createColumn(column);		
 			}
 		});
 	});

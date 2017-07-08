@@ -2,7 +2,7 @@ function Column(id, name) {
 	var self = this;
 	this.id = id;
 	this.name = name || 'New column';
-	// this.$element = createColumn();
+	this.$element = createColumn();
 
 	function createColumn() {
 		// creating components of columns:
@@ -21,7 +21,7 @@ function Column(id, name) {
 		$columnAddCard.click(function(event) {
 			var cardName = prompt("Enter the name of the card");
 			event.preventDefault();
-			// self.createCard(new Card(cardName));
+			self.createCard(new Card(cardName));
 			$.ajax({
 				url: baseUrl + '/card',
 				method: 'POST',

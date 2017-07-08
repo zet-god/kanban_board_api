@@ -22,7 +22,7 @@ function Card(id, name) {
 
 		// return of the created card:
 		return $card;
-	}
+	};
 };
 
 Card.prototype = {
